@@ -1,19 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+// React.createElement => Object => HTMLElement(render)
 
+// const heading = React.createElement("h1", {id:"heading"}, "Namaste react "); // core element using REACT
 
-
-const parent = React.createElement("div", {id: "parent"}, [React.createElement("div", {id: "child"}, [React.createElement("h1", {}, "I omahh tag"), React.createElement("h2", {}, "I'm H2 tag")]),React.createElement("div", {id: "child"}, [React.createElement("h1", {}, "I'm H1 tag"), React.createElement("h2", {}, "I'm H2 tag")])]);
-
-
-// JSX that exists
-
-console.log(parent);
-
-
-// const heading = React.createElement("h1", {id: "heading", xyz:"abd"}, "Hello World from React!");
 // console.log(heading);
-const root =  ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+
+//JSX - HTML like syntax
+
+// JSX (transpiled before it reaches JS ) - PARCEL  -> BABEL
+
+// JSX => React.createElement => ReactElement -JS object => HTML Element(render)
+
+// const jsxHeading =<h1 className="head">Namaste React using JSX</h1>; // Element creation using JSX
+
+const heading = (
+    <h1 className="head" tabIndex="1">
+        Namaste React using JSX
+    </h1>
+);
+console.log(heading);
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+// root.render(heading);
+
+
+
+root.render(heading);
+
+
+
+
 
